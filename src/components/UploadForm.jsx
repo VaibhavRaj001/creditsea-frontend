@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 const API_URL = import.meta.env.VITE_API_URL;
+import { Link } from "react-router-dom";
 
 export default function UploadForm() {
   const [file, setFile] = useState(null);
@@ -422,8 +423,8 @@ export default function UploadForm() {
                 </div>
               </div>
             </div>
-            <a
-              href={`/reports/${reportData.id}`}
+            <Link
+              to={`/reports/${reportData.id}`}
               style={{
                 display: "block",
                 marginTop: 16,
@@ -440,7 +441,7 @@ export default function UploadForm() {
               }}
             >
               View Full Report →
-            </a>
+            </Link> 
           </div>
         )}
 
